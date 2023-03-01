@@ -33,8 +33,9 @@ public class Main {
         System.out.print("Digite a largura do espaço: ");
         local.setComprimento(Integer.parseInt(sc.nextLine()));
 
-        festa.mostrar();
-        festa.classificar();
-        local.mostra();
+        System.out.println(festa.mostrar());
+        System.out.println(festa.classificar());
+        System.out.println(local.mostra());
+        System.out.println(festa.possivelLocal(local.tamanhoEspaco()));
     }
 }

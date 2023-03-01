@@ -5,6 +5,9 @@ public class Festa {
     private Integer qntConvidados;
     private Double custo;
 
+    public Festa() {
+    }
+
     public String getNome() {
         return nome;
     }
@@ -37,29 +40,32 @@ public class Festa {
         this.custo = custo;
     }
 
-    public void mostrar() {
-        System.out.println( "Dados da Festa: " +
+    public String mostrar() {
+        return ( "Dados da Festa: " +
                 "\n" + "Responsável: " + nome +
                 "\n" + "Cpf: " + cpf +
                 "\n" + "Quantidade de convidados: " + qntConvidados +
                 "\n" + "Valor: " + custo);
     }
 
-    public void classificar() {
+    public String classificar() {
         if (qntConvidados < 300 && custo < 15000) {
-            System.out.println("Festa Junina");
+            return ("Festa Junina");
         } else if (qntConvidados < 300 && custo >= 15000) {
-            System.out.println("Aniversário");
+            return ("Aniversário");
         } else if (qntConvidados >= 300 && custo < 15000) {
-            System.out.println("Formatura");
-        } else System.out.println("Casamento");
+            return ("Formatura");
+        } else return ("Casamento");
     }
 
-    public void possivelLocal(Integer local) {
-        if ((qntConvidados / local) != (4 / 3)) {
-            System.out.println("O local não acomoda os convidados de forma confortável");
+    public String possivelLocal(Integer tamanho) {
+
+        Integer espacoAdequado = (3 * qntConvidados) / 4;
+
+        if (tamanho >= espacoAdequado) {
+            return ("O local é adequado para o evento");
         } else {
-            System.out.println("O local é adequado para o evento");
+            return ("O local não acomoda os convidados de forma confortável");
         }
     }
 
