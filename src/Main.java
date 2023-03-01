@@ -9,6 +9,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         Festa festa;
+        Local local;
 
         festa = new Festa();
 
@@ -26,7 +27,14 @@ public class Main {
 
         System.out.println();
 
+        local = new Local();
+        System.out.print("Digite a largura do espaço: ");
+        local.setLargura(Integer.parseInt(sc.nextLine()));
+        System.out.print("Digite a largura do espaço: ");
+        local.setComprimento(Integer.parseInt(sc.nextLine()));
+
         festa.mostrar();
         festa.classificar();
+        local.mostra();
     }
 }

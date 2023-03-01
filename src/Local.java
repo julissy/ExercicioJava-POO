@@ -1,22 +1,30 @@
 public class Local {
 
-    private Double altura;
-    private Double comprimento;
+    private Integer largura;
+    private Integer comprimento;
 
 
-    public Double getAltura() {
-        return altura;
+    public Integer getLargura() {
+        return largura;
     }
 
-    public void setAltura(Double altura) {
-        this.altura = altura;
+    public void setLargura(Integer largura) {
+        this.largura = largura;
     }
 
-    public Double getComprimento() {
+    public Integer getComprimento() {
         return comprimento;
     }
 
-    public void setComprimento(Double comprimento) {
+    public void setComprimento(Integer comprimento) {
         this.comprimento = comprimento;
+    }
+
+    public void mostra() {
+         Integer tamanho = comprimento * largura;
+        System.out.println("Dados do Local: " +
+                "\n" + "Largura: " + largura + "m" +
+                "\n" + "Comprimento: " + comprimento + "m" +
+                "\n" + "Tamanho do espaço: " + tamanho + "m²");
     }
 }

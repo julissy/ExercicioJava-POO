@@ -55,4 +55,12 @@ public class Festa {
         } else System.out.println("Casamento");
     }
 
+    public void possivelLocal(Integer local) {
+        if ((qntConvidados / local) != (4 / 3)) {
+            System.out.println("O local não acomoda os convidados de forma confortável");
+        } else {
+            System.out.println("O local é adequado para o evento");
+        }
+    }
+
 }
